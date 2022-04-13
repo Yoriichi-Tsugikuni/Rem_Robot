@@ -37,6 +37,7 @@ import TG_ROBOT.modules.sql.welcome_sql as sql
 
 from TG_ROBOT import (
     DEV_USERS,
+    ALONE_ID,
     OWNER_ID,
     DRAGONS,
     DEMONS,
@@ -76,6 +77,8 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
+
+KURUMI = "https://telegra.ph//file/317dd2cf62605a483a4da.jpg"
 
 VALID_WELCOME_FORMATTERS = [
     "first",
@@ -235,6 +238,18 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
                     f"Bot Owner just joined the chat"
+                )
+                continue
+
+            if new_mem.id == ALONE_ID:
+                update.effective_message.reply_photo(
+                    KURUMI, caption=f"You should feel honoured my crush Ayato Komisato just joined ❤️.", reply_to_message_id=reply,
+                    parse_mode=ParseMode.HTML,
+                )
+                welcome_log = (
+                    f"{html.escape(chat.title)}\n"
+                    f"#USER_JOINED\n"
+                    f"Kurumi's BF just joined the group"
                 )
                 continue
 
