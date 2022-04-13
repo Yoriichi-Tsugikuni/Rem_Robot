@@ -36,7 +36,7 @@ buttons = [
 
     [
         InlineKeyboardButton(text="ᴅᴇᴍᴏɴꜱ ʟᴏɢꜱ", url="https://t.me/Rem_logs" ),
-        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/AnimeChatAura"),
+        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/AnimeChatFolks"),
     ],
 
   [   
