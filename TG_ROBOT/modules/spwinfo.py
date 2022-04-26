@@ -54,7 +54,7 @@ class AioHttp:
             return await resp.read()
 
 
-@pgram.on_message(filters.command("spwinfo", f"spwinfo@{BOT_USERNAME}") & ~filters.edited & ~filters.bot)
+@pgram.on_message(filters.command("spwinfo", f"spwinfo@{BOT_USERNAME}") & ~filters.bot)
 async def lookup(client, message):
     cmd = message.command
     if not message.reply_to_message and len(cmd) == 1:
