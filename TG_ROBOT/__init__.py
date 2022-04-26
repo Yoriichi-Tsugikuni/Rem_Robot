@@ -95,7 +95,7 @@ if ENV:
     API_HASH = os.environ.get("API_HASH", None) # Bot Owner's API_HASH (From:- https://my.telegram.org/auth)
     DB_URL = os.environ.get("DB_URL") # Any SQL Database Link (RECOMMENDED:- PostgreSQL & https://www.elephantsql.com)
     DONATION_LINK = os.environ.get("DONATION_LINK") # Donation Link (ANY)
-    ALONE_ID = os.environ.get("ALONE_ID", 5148631955)
+    ALONE_ID = os.environ.get("ALONE_ID", 5297261589)
     LOAD = os.environ.get("LOAD", "").split() # Don't Change
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split() # Don't Change
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False)) # Don't Change
