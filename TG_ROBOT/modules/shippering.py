@@ -51,7 +51,7 @@ today = str(dt()[0])
 tomorrow = str(dt_tom())
 
 
-@pgram.on_message(filters.command("couples") & ~filters.edited)
+@pgram.on_message(filters.command("couples"))
 @capture_err
 async def couple(_, message):
     if message.chat.type == "private":
